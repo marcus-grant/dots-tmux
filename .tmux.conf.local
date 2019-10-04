@@ -293,3 +293,15 @@ tmux_conf_copy_to_os_clipboard=false
 # move status line to top
 #set -g status-position top
 
+
+ 
+# -- my plugins ----------------------------------------------------------------
+# ( use the syntax of folding lines with \ inside a single quote
+set -g @tpm_plugins '          \
+  tmux-plugins/tpm             \
+  tmux-plugins/tmux-resurrect  \
+'
+
+# run -b '~/.tmux/plugins/tpm/tpm'
+# run -b '~/.tmux.conf'
+
