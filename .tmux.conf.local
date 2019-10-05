@@ -297,6 +297,8 @@ tmux_conf_copy_to_os_clipboard=false
  
 # -- my plugins ----------------------------------------------------------------
 # ( use the syntax of folding lines with \ inside a single quote
+# some useful info from the dot repo:
+# https://github.com/gpakosz/.tmux/issues/228
 set -g @tpm_plugins '          \
   tmux-plugins/tpm             \
   tmux-plugins/tmux-resurrect  \
