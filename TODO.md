@@ -4,16 +4,7 @@ To - Do's
 Basic
 -----
 
-* [ ] Start a `v2` branch to FINALLY start rebuilding from scratch
-    * Oh my TMUX just isn't cutting it quite frankly
-    * Too many weird asbtractions that are hard to work around
-* [ ] Install TPM
-    * [GitHub Tmux-Plugins Team Page][03]
-    * This shows all the TPM team verified plugins
-    * Including the [plugin manager][04] itself
-    * Clone the tpm repository into the dotfiles repository
-    * Then add the so commented tpm config sections, `plugins` & `tpm initialization line`
-* [ ] Install tmux-sensible to prevent poluting config with boilerplate tmux configs
+* [ ] Fix order of panes to start @ 1 end @ 0
 * [ ] tmux-resurrect *(used to persist tmux envs between restarts)*
 * [ ] ... OR tmux-continuum
 * [ ] Fix tab highlighting bug, wrong tabs are being highlighted
@@ -34,6 +25,21 @@ Planning
 
 Completed
 ---------
+
+* [x] Add `pain-control` plugin
+* [x] Add vim pane navigation to pain-control using `vim-tmux-navigator`
+* [x] Start a `v2` branch to FINALLY start rebuilding from scratch
+    * Oh my TMUX just isn't cutting it quite frankly
+    * Too many weird asbtractions that are hard to work around
+* [x] Install TPM
+    * [GitHub Tmux-Plugins Team Page][03]
+    * This shows all the TPM team verified plugins
+    * Including the [plugin manager][04] itself
+    * Clone the tpm repository into the dotfiles repository
+    * Then add the so commented tpm config sections, `plugins` & `tpm initialization line`
+    * Only track `plugins/tpm` by adding it initially
+    * Then gitignore the rest with `plugins/*`
+* [x] Install tmux-sensible to prevent poluting config with boilerplate tmux configs
 
 Notes
 -----

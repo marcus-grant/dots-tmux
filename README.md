@@ -18,7 +18,6 @@ I used to use [Oh My TMUX](https://github.com/gpakosz/.tmux) as my tmux dotfiles
 
 The default setup is of course the tmux defaults, but also uses [tmux-plugins/tmux-sensible](https://github.com/tmux-plugins/tmux-sensible)to reduce clutter in the configuration file and to as the plugin implies, give a *sensible* base to start from that most tmux users will likely understand.
 
-
 Keymaps
 -------
 
@@ -32,6 +31,44 @@ Keymaps
 - reload config   : `prefix + r`
 - TPM: install    : `prefix + I`
 - TPM: uninstall  : `prefix + u`
+- move pane left  : `C-h`
+- move pane down  : `C-j`
+- move pane up    : `C-k`
+- move pane right : `C-l`
+
+**add resize keymaps**
+
+
+VIM Pane Control
+----------------
+
+Since switching panes often needs to be done in quick succession and with text editors like vim, this below config snippet makes life a lot easier:
+```
+# These override the pain-controll movements
+# pane navigation
+bind -r h select-pane -L  # move left
+bind -r j select-pane -D  # move down
+bind -r k select-pane -U  # move up
+bind -r l select-pane -R  # move right
+bind > swap-pane -D       # swap current pane with the next one
+bind < swap-pane -U       # swap current pane with the previous one
+# Smart pane switching with awareness of Vim splits.
+# See: https://github.com/christoomey/vim-tmux-navigator
+is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
+    | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
+bind-key -n C-h if-shell "$is_vim" "send-keys C-h"  "select-pane -L"
+bind-key -n C-j if-shell "$is_vim" "send-keys C-j"  "select-pane -D"
+bind-key -n C-k if-shell "$is_vim" "send-keys C-k"  "select-pane -U"
+bind-key -n C-l if-shell "$is_vim" "send-keys C-l"  "select-pane -R"
+bind-key -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
+bind-key -T copy-mode-vi C-h select-pane -L
+bind-key -T copy-mode-vi C-j select-pane -D
+bind-key -T copy-mode-vi C-k select-pane -U
+bind-key -T copy-mode-vi C-l select-pane -R
+bind-key -T copy-mode-vi C-\ select-pane -l
+```
+
+Now it's possible to switch panes while pressing the vim movement keys `h`, `j`, `k`, `l` while holding `CTRL` and whether in tmux or vim inside of tmux, or just plain vim without tmux assuming `vim-tmux-navigator` is installed as a plugin for vim or neovim.
 
 
 OLD README - DELETEME
