@@ -1,5 +1,41 @@
-.tmux
-=====
+TMUX Dotfiles
+=============
+
+Overview
+--------
+
+These are tmux dotfiles, if you're looking for dotfiles for a program it's probably safe to assume you know what the program is and why you'd want dotfiles. Do keep in mind, this is customized for me, I try not to stray too far from public norms when customizing my software configurations for the sake of keeping up with standards, but there will probably be some customizations people won't be keen on. These dotfiles should work fine to just clone into a local system, and then link to expected dotfile locations:
+
+```sh
+git clone https://github.com/marcus-grant/dots-tmux.git /some/dotfiles/location
+ln -sf /some/dotfiles/location ~/.tmux
+ln -sf /some/dotfiles/location/.tmux.conf ~/.tmux.conf
+```
+
+Or you can do what I do, which is to use my own [ansible role](https://github.com/marcus-grant/role-mydotfiles) that will automatically manage downloading, linking, and running post install actions necessary, which in this case are fairly simple.
+
+I used to use [Oh My TMUX](https://github.com/gpakosz/.tmux) as my tmux dotfiles because, credit where it's due, is HIGHLY filled with features, but does so with abstractions that make it difficult for me to customize the way I want. For me in particular, it made it very dificult to use [TPM](https://github.com/tmux-plugins/tpm) or the Tmux Plugin Manager, which allows me to install fancy plugins to significantly improve features.
+
+The default setup is of course the tmux defaults, but also uses [tmux-plugins/tmux-sensible](https://github.com/tmux-plugins/tmux-sensible)to reduce clutter in the configuration file and to as the plugin implies, give a *sensible* base to start from that most tmux users will likely understand.
+
+
+Keymaps
+-------
+
+- First and foremost, all the defaults are basicaly the tmux defaults, overriden by sensible-tmux's defaults, overriden by these:
+**upgrade to table later**
+- Might also include some keybindings I'm just trying to remember better that come either in tmux-sensible or tmux's defaults
+- next pane       : `prefix + n`
+- previous pane   : `prefix + p`
+- split vertical  : `prefix + |`
+- split horizontal: `prefix + -`
+- reload config   : `prefix + r`
+- TPM: install    : `prefix + I`
+- TPM: uninstall  : `prefix + u`
+
+
+OLD README - DELETEME
+=====================
 
 Self-contained, pretty and versatile `.tmux.conf` configuration file.
 
