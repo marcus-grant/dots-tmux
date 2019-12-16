@@ -4,7 +4,17 @@ TMUX Dotfiles
 Overview
 --------
 
-These are tmux dotfiles, if you're looking for dotfiles for a program it's probably safe to assume you know what the program is and why you'd want dotfiles. Do keep in mind, this is customized for me, I try not to stray too far from public norms when customizing my software configurations for the sake of keeping up with standards, but there will probably be some customizations people won't be keen on. These dotfiles should work fine to just clone into a local system, and then link to expected dotfile locations:
+These are tmux dotfiles, if you're looking for dotfiles for a program it's probably safe to assume you know what the program is and why you'd want dotfiles. Do keep in mind, this is customized for me, I try not to stray too far from public norms when customizing my software configurations for the sake of keeping up with standards, but there will probably be some customizations people won't be keen on. 
+
+I used to use [Oh My TMUX](https://github.com/gpakosz/.tmux) as my tmux dotfiles because, credit where it's due, is HIGHLY filled with features, but does so with abstractions that make it difficult for me to customize the way I want. For me in particular, it made it very dificult to use [TPM](https://github.com/tmux-plugins/tpm) or the Tmux Plugin Manager, which allows me to install fancy plugins to significantly improve features.
+
+The default setup is of course the tmux defaults, but also uses [tmux-plugins/tmux-sensible](https://github.com/tmux-plugins/tmux-sensible)to reduce clutter in the configuration file and to as the plugin implies, give a *sensible* base to start from that most tmux users will likely understand.
+
+
+Install
+-------
+
+These dotfiles should work fine to just clone into a local system, and then link to expected dotfile locations:
 
 ```sh
 git clone https://github.com/marcus-grant/dots-tmux.git /some/dotfiles/location
@@ -14,9 +24,6 @@ ln -sf /some/dotfiles/location/.tmux.conf ~/.tmux.conf
 
 Or you can do what I do, which is to use my own [ansible role](https://github.com/marcus-grant/role-mydotfiles) that will automatically manage downloading, linking, and running post install actions necessary, which in this case are fairly simple.
 
-I used to use [Oh My TMUX](https://github.com/gpakosz/.tmux) as my tmux dotfiles because, credit where it's due, is HIGHLY filled with features, but does so with abstractions that make it difficult for me to customize the way I want. For me in particular, it made it very dificult to use [TPM](https://github.com/tmux-plugins/tpm) or the Tmux Plugin Manager, which allows me to install fancy plugins to significantly improve features.
-
-The default setup is of course the tmux defaults, but also uses [tmux-plugins/tmux-sensible](https://github.com/tmux-plugins/tmux-sensible)to reduce clutter in the configuration file and to as the plugin implies, give a *sensible* base to start from that most tmux users will likely understand.
 
 Keymaps
 -------
@@ -37,6 +44,20 @@ Keymaps
 - move pane right : `C-l`
 
 **add resize keymaps**
+
+
+TPM
+---
+
+The **Tmux Plugin Manager** needs to be tracked within the `plugins/` directory so that whenever this repository is cloned it can still start the plugin manager to download the rest. That means all other places within `plugins` is untracked by the repository so that each plugin can be updated by the plugin manager separately.
+
+### Plugins
+
+- tmux-sensible
+    - A good boilerplate reducing plugin used as a base for this setup
+- pain-control
+    - Reduces complexity in defining pane controls for Tmux
+
 
 
 VIM Pane Control
