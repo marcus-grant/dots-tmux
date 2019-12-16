@@ -31,17 +31,23 @@ Keymaps
 - First and foremost, all the defaults are basicaly the tmux defaults, overriden by sensible-tmux's defaults, overriden by these:
 **upgrade to table later**
 - Might also include some keybindings I'm just trying to remember better that come either in tmux-sensible or tmux's defaults
-- next pane       : `prefix + n`
-- previous pane   : `prefix + p`
-- split vertical  : `prefix + |`
-- split horizontal: `prefix + -`
-- reload config   : `prefix + r`
-- TPM: install    : `prefix + I`
-- TPM: uninstall  : `prefix + u`
-- move pane left  : `C-h`
-- move pane down  : `C-j`
-- move pane up    : `C-k`
-- move pane right : `C-l`
+- next pane         : `prefix + n`
+- previous pane     : `prefix + p`
+- split vertical    : `prefix + |`
+- split horizontal  : `prefix + -`
+- reload config     : `prefix + r`
+- TPM: install      : `prefix + I`
+- TPM: uninstall    : `prefix + u`
+- move pane left    : `C-h`
+- move pane down    : `C-j`
+- move pane up      : `C-k`
+- move pane right   : `C-l`
+- copy mode         : `prefix + [`
+- (copy mode) copy  : `prefix + y`
+- (copy mode) select: `prefix + v`
+- (copy mode) boxi  : `prefix + r`
+- copy current cmd  : `prefix + y`
+- paste             : `prefix + P`
 
 **add resize keymaps**
 
@@ -50,6 +56,20 @@ TPM
 ---
 
 The **Tmux Plugin Manager** needs to be tracked within the `plugins/` directory so that whenever this repository is cloned it can still start the plugin manager to download the rest. That means all other places within `plugins` is untracked by the repository so that each plugin can be updated by the plugin manager separately.
+
+
+Tmux-Yank
+---------
+
+To improve copy-paste behavior of Tmux, this setup uses `tmux-yank` which improves many copying behaviors including being able to copy the current line in the command line without entering copy mode. Speaking of, copy-mode uses the built in `vi-mode` with some extra keybindings that match the behavior more closely using these config lines:
+
+```
+setw -g mode-keys vi
+bind-key -T vi-copy v begin-selection
+bind-key -T vi-copy r rectangle-toggle
+```
+
+
 
 ### Plugins
 

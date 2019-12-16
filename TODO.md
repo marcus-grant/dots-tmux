@@ -18,7 +18,9 @@ Planning
     * [ ] [this][02] alacritty terminal issue on github describes some solutions
 * [ ] Update external ansible variables to account for new dotfiles name that exclude prefix `.`
     * [ ] which means also renaming the file as such
+* [ ] Consider install `vim-husk` on vim to ensure `tmux-yank` properly copies to clipboard
 * [ ] Better session nesting for remote computers
+* [ ] Install & Configure `tmux-sessionist`
 * [ ] General Keymap improvements
 * [ ] Add tmux reload config keymap
 * [ ] Check out tmux-sensible's rebinding syntax and extra features like key repeats without prefix
@@ -26,6 +28,8 @@ Planning
 Completed
 ---------
 
+* [x] Copy-Paste
+    * works after applying [these changes](https://thoughtbot.com/blog/tmux-copy-paste-on-os-x-a-better-future)
 * [x] Add `pain-control` plugin
 * [x] Add vim pane navigation to pain-control using `vim-tmux-navigator`
 * [x] Start a `v2` branch to FINALLY start rebuilding from scratch
