@@ -4,12 +4,6 @@ To - Do's
 Basic
 -----
 
-* [ ] Change status bar style:
-    * [ ] session name 
-    * [ ] pane selection, background color unless selected
-    * [ ] pane selection, remove asterisk from selection
-    * [ ] time on left (no date)
-    * [ ] hostname & username on left 
 * [ ] tmux-resurrect *(used to persist tmux envs between restarts)*
 * [ ] set a second prefix
 * [ ] ... OR tmux-continuum
@@ -25,6 +19,8 @@ Planning
     * [ ] [this][02] alacritty terminal issue on github describes some solutions
 * [ ] Update external ansible variables to account for new dotfiles name that exclude prefix `.`
     * [ ] which means also renaming the file as such
+* [ ] Fix battery indicator so it doesn't show anything when no battery present
+* [ ] pane selection, remove asterisk from selection
 * [ ] Consider install `vim-husk` on vim to ensure `tmux-yank` properly copies to clipboard
 * [ ] Better session nesting for remote computers
 * [ ] Install & Configure `tmux-sessionist`
@@ -35,6 +31,8 @@ Planning
 Completed
 ---------
 
+* [x] Change status bar style:
+    * handled by copying over [this](https://bit.ly/2Z2Z5mI) dotfile's styling & statusbar configs
 * [x] Fix order of panes to start @ 1 end @ 0
 * [x] Copy-Paste
     * works after applying [these changes](https://thoughtbot.com/blog/tmux-copy-paste-on-os-x-a-better-future)
