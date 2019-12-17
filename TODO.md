@@ -4,10 +4,17 @@ To - Do's
 Basic
 -----
 
-* [ ] Fix order of panes to start @ 1 end @ 0
+* [ ] Change status bar style:
+    * [ ] session name 
+    * [ ] pane selection, background color unless selected
+    * [ ] pane selection, remove asterisk from selection
+    * [ ] time on left (no date)
+    * [ ] hostname & username on left 
 * [ ] tmux-resurrect *(used to persist tmux envs between restarts)*
+* [ ] set a second prefix
 * [ ] ... OR tmux-continuum
 * [ ] Fix tab highlighting bug, wrong tabs are being highlighted
+* [ ] Add remote nesting as suggested [here](https://bit.ly/36GpRDL)
 * [ ] Ensure correct `$TERM` env var is applied in bash dotfiles
 * [ ] Recolor the bottom tab
 
@@ -28,6 +35,7 @@ Planning
 Completed
 ---------
 
+* [x] Fix order of panes to start @ 1 end @ 0
 * [x] Copy-Paste
     * works after applying [these changes](https://thoughtbot.com/blog/tmux-copy-paste-on-os-x-a-better-future)
 * [x] Add `pain-control` plugin
