@@ -48,6 +48,8 @@ Keymaps
 - (copy mode) boxi  : `prefix + r`
 - copy current cmd  : `prefix + y`
 - paste             : `prefix + P`
+- save all tmux     : `prefix + S`
+- restore all tmux  : `prefix + R`
 
 **add resize keymaps**
 
