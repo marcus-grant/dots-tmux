@@ -5,12 +5,9 @@ Basic
 -----
 
 * [ ] tmux-resurrect *(used to persist tmux envs between restarts)*
-* [ ] set a second prefix
 * [ ] ... OR tmux-continuum
-* [ ] Fix tab highlighting bug, wrong tabs are being highlighted
 * [ ] Add remote nesting as suggested [here](https://bit.ly/36GpRDL)
-* [ ] Ensure correct `$TERM` env var is applied in bash dotfiles
-* [ ] Recolor the bottom tab
+* [ ] set a second prefix
 
 Planning
 --------
@@ -20,8 +17,10 @@ Planning
 * [ ] Update external ansible variables to account for new dotfiles name that exclude prefix `.`
     * [ ] which means also renaming the file as such
 * [ ] Fix battery indicator so it doesn't show anything when no battery present
+    * consider using [this battery plugin](https://bit.ly/34sPkiz)
 * [ ] pane selection, remove asterisk from selection
 * [ ] Consider install `vim-husk` on vim to ensure `tmux-yank` properly copies to clipboard
+* [ ] Ensure correct `$TERM` env var is applied in bash dotfiles
 * [ ] Better session nesting for remote computers
 * [ ] Install & Configure `tmux-sessionist`
 * [ ] General Keymap improvements
