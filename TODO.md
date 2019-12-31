@@ -4,6 +4,7 @@ To - Do's
 Basic
 -----
 
+* [ ] fix: tpm doesn't get included correctly on first clone of dots
 * [ ] tmux-resurrect *(used to persist tmux envs between restarts)*
 * [ ] Some scrollback mode feature to scroll through previous cmds/stdout
 * [ ] ... OR tmux-continuum
