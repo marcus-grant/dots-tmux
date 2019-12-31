@@ -5,6 +5,7 @@ Basic
 -----
 
 * [ ] tmux-resurrect *(used to persist tmux envs between restarts)*
+* [ ] Some scrollback mode feature to scroll through previous cmds/stdout
 * [ ] ... OR tmux-continuum
 * [ ] Add remote nesting as suggested [here](https://bit.ly/36GpRDL)
 * [ ] set a second prefix
