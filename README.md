@@ -30,6 +30,7 @@ Keymaps
 
 - First and foremost, all the defaults are basicaly the tmux defaults, overriden by sensible-tmux's defaults, overriden by these:
 **upgrade to table later**
+- **Prefix Key**    : `C-\`
 - Might also include some keybindings I'm just trying to remember better that come either in tmux-sensible or tmux's defaults
 - next pane         : `prefix + n`
 - previous pane     : `prefix + p`
